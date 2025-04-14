@@ -10,10 +10,7 @@ import java.net.http.HttpResponse;
 
 public class ConsultaApi {
 
-    Gson gson = new GsonBuilder()
-            .setPrettyPrinting()
-            .create();
-
+    //Se crea instancia del objeto JsonParser para poder mapear el Json de la respuesta
     JsonParser parser = new JsonParser();
 
     public double getPrecio (String moneda) throws IOException, InterruptedException {
@@ -27,9 +24,12 @@ public class ConsultaApi {
 
         String respuesta = response.body();
 
+        //Se convierte el string de la respuesta en un objeto del tipo JsonObject
         JsonObject jsonObj = parser.parse(respuesta).getAsJsonObject();
+        //Se extraen los datos bajo la llave "conversion_rates" en un objeto del tipo JsonObject
         JsonObject cotizaciones = jsonObj.get("conversion_rates").getAsJsonObject();
 
+        //Se devuelve el valor de la llave coincidente con nuestra "moneda"
         return cotizaciones.get(moneda).getAsDouble();
     }
 }

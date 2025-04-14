@@ -1,23 +1,20 @@
 package com.camartin.exchangemonedas.models;
 
-import static java.lang.Math.round;
-
 public class TasaDeCambio {
 
+    //Declaracion de variables
     private String monedaSolicitada;
     private String monedaOfrecida;
     private double precioUsd;
 
+    //Constructor
     public TasaDeCambio(String monedaSolicitada, String monedaOfrecida, double precioUsd) {
         this.monedaSolicitada = monedaSolicitada;
         this.monedaOfrecida = monedaOfrecida;
         this.precioUsd = precioUsd;
     }
 
-    public double getPrecioUsd() {
-        return precioUsd;
-    }
-
+    //Override del metodo toString() para customizar la visualización del objeto
     @Override
     public String toString() {
         return "TasaDeCambio{" +
@@ -27,6 +24,7 @@ public class TasaDeCambio {
                 '}';
     }
 
+    //Metodo que devuelve el valor de una moneda respecto al USD o su inversa según la direccion del canje
     public double getTasaDeCambio() {
 
         if (this.monedaOfrecida.equals("USD")) {
