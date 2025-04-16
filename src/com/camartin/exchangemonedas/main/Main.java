@@ -71,9 +71,9 @@ public class Main {
                 throw new RuntimeException(e);
             }
 
-            //Se crea instancia del objeto TasaDeCambio con las monedas seleccionadas y el precio adquirido
+            //Se crea instancia de la clase TasaDeCambio con las monedas seleccionadas y el precio adquirido
             TasaDeCambio tasaDeCambio = new TasaDeCambio(monedaSolicitada, monedaOfrecida, precioUsd);
-            System.out.println(tasaDeCambio);
+            //System.out.println(tasaDeCambio);
 
             //Se pregunta cantidad a cambiar
             System.out.println("Cuantos " + monedaOfrecida + " desea convertir a " + monedaSolicitada + ":");

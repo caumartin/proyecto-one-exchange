@@ -10,7 +10,7 @@ import java.net.http.HttpResponse;
 
 public class ConsultaApi {
 
-    //Se crea instancia del objeto JsonParser para poder mapear el Json de la respuesta
+    //Se crea instancia de la clase JsonParser para poder mapear el Json de la respuesta
     JsonParser parser = new JsonParser();
 
     public double getPrecio (String moneda) throws IOException, InterruptedException {

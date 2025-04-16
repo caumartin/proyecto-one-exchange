@@ -5,6 +5,8 @@ public class Menu {
     public void getMenu() {
 
         System.out.println("----------------------------");
+        System.out.println("------ CASA DE CAMBIO ------");
+        System.out.println("----------------------------");
         System.out.println("1- Cambio de ARS por USD");
         System.out.println("2- Cambio de USD por ARS");
         System.out.println("3- Cambio de BRL por USD");
